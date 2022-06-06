@@ -12,7 +12,34 @@ object QuadraticFormula {
       (-b - sqrt(b * b - 4 * a * c)) / (2 * a)
     ).distinct
   }
+ 
+  def main(argv: Array[String]): Unit = {
+    println("Hello this is main of QuadraticFormula")
+    println(quadraticFormula(1, 2, -3))
+    println(quadraticFormula(-1, 3, 7))
+  }
+  def discriminant(a: Int, b: Int, c: Int):Int = {
+    (b * b - (4 * a * c))
+   
+     val d = discriminant(a,b,c)
+if ( d == 0)
+  { 
+    println("one real solutions")
+  }
+else if ( d < 0) 
+  {
+    println{"no real solutions"}
+  }
 
+else 
+  {
+    println{"two real solutions"}
+  }
+  
+  }
+}
+
+  
   // TASK:
   //    Update the formula to compute the discriminant,
   //    and detect whether there are zero, one, or two real roots.
@@ -26,9 +53,7 @@ object QuadraticFormula {
   //    Make sure your tests are up to date, and that they test the
   //    new features you implemented in previous step.
 
-  def main(argv: Array[String]): Unit = {
-    println("Hello this is main of QuadraticFormula")
-    println(quadraticFormula(1, 2, -3))
-    println(quadraticFormula(-1, 3, 7))
-  }
-}
+  
+
+ 
+
